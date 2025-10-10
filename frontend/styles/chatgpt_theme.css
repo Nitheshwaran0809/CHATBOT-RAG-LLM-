@@ -1,0 +1,345 @@
+/* Main container */
+.stApp {
+    background-color: #343541;
+    color: #ECECF1;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: #202123;
+    backdrop-filter: blur(10px);
+    background-color: rgba(32, 33, 35, 0.95);
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #10A37F, #0E8C6F);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.header h1 {
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Message containers */
+.message-container {
+    display: flex;
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease-in;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.user-bubble {
+    background-color: #444654;
+    margin-left: auto;
+    max-width: 85%;
+    border-radius: 18px 18px 4px 18px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.assistant-bubble {
+    background-color: #343541;
+    margin-right: auto;
+    max-width: 95%;
+    border: 1px solid #565869;
+    border-radius: 18px 18px 18px 4px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.message-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    min-width: 2rem;
+    flex-shrink: 0;
+}
+
+.message-content {
+    flex: 1;
+    color: #ECECF1;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.message-text {
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.message-timestamp {
+    font-size: 0.75rem;
+    color: #8E8EA0;
+    margin-top: 0.5rem;
+}
+
+/* Code blocks */
+pre {
+    background-color: #000000 !important;
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+    border: 1px solid #444;
+}
+
+code {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9rem;
+    background-color: #2d2d2d;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #10A37F;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.stButton > button:hover {
+    background-color: #0E8C6F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 163, 127, 0.4);
+}
+
+/* Input field */
+.stTextInput > div > div > input {
+    background-color: #40414F;
+    color: #ECECF1;
+    border: 1px solid #565869;
+    border-radius: 6px;
+    padding: 0.75rem;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #10A37F;
+    box-shadow: 0 0 0 2px rgba(16, 163, 127, 0.2);
+}
+
+/* Text area */
+.stTextArea > div > div > textarea {
+    background-color: #40414F;
+    color: #ECECF1;
+    border: 1px solid #565869;
+    border-radius: 6px;
+    padding: 0.75rem;
+}
+
+/* Radio buttons */
+.stRadio > div {
+    background-color: #40414F;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #565869;
+}
+
+/* File uploader */
+.stFileUploader > div {
+    background-color: #40414F;
+    border: 2px dashed #565869;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* Success/Error messages */
+.stSuccess {
+    background-color: rgba(16, 163, 127, 0.1);
+    border: 1px solid #10A37F;
+    color: #10A37F;
+}
+
+.stError {
+    background-color: rgba(255, 75, 75, 0.1);
+    border: 1px solid #FF4B4B;
+    color: #FF4B4B;
+}
+
+.stWarning {
+    background-color: rgba(255, 196, 0, 0.1);
+    border: 1px solid #FFC400;
+    color: #FFC400;
+}
+
+.stInfo {
+    background-color: rgba(0, 123, 255, 0.1);
+    border: 1px solid #007BFF;
+    color: #007BFF;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.typing-indicator {
+    animation: typing 1.5s infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #202123;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #565869;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6E6E80;
+}
+
+/* Custom status indicators */
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-ready {
+    background-color: #10A37F;
+}
+
+.status-not-ready {
+    background-color: #FF4B4B;
+}
+
+.status-processing {
+    background-color: #FFC400;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Chat input area */
+.chat-input-container {
+    position: sticky;
+    bottom: 0;
+    background-color: #343541;
+    padding: 1rem 0;
+    border-top: 1px solid #565869;
+}
+
+/* Mode selector */
+.mode-selector {
+    background: linear-gradient(135deg, #40414F, #343541);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #565869;
+}
+
+/* Upload section */
+.upload-section {
+    background-color: #40414F;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #565869;
+}
+
+/* Improved content rendering */
+.stMarkdown {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
+    color: #ECECF1 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.stMarkdown p {
+    color: #ECECF1 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+.stMarkdown ul, .stMarkdown ol {
+    color: #ECECF1 !important;
+    padding-left: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.stMarkdown li {
+    color: #ECECF1 !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.6 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+.stMarkdown strong {
+    color: #10A37F !important;
+    font-weight: 600 !important;
+}
+
+.stMarkdown em {
+    color: #FFC400 !important;
+    font-style: italic !important;
+}
+
+/* Fix for numbered lists and steps */
+.stMarkdown ol li::marker {
+    color: #10A37F !important;
+    font-weight: bold !important;
+}
+
+.stMarkdown ul li::marker {
+    color: #10A37F !important;
+}
+
+/* Ensure content doesn't get cut off */
+.element-container {
+    max-width: 100% !important;
+    overflow: visible !important;
+}
+
+.stMarkdown div {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+}

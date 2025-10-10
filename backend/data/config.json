@@ -1,0 +1,21 @@
+{
+  "app_name": "Code Assistant AI",
+  "version": "1.0.0",
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "code_assistant_db",
+    "user": "admin"
+  },
+  "features": {
+    "general_chat": true,
+    "code_assistant": true,
+    "manual_data_setup": true,
+    "file_upload": false
+  },
+  "limits": {
+    "max_tokens": 4000,
+    "max_history": 10,
+    "chunk_size": 500
+  }
+}
